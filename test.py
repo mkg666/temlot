@@ -1,3 +1,10 @@
-import mysqldb
+import tsdb_sample
 
-print mysqldb.select("SELECT * FROM stu WHERE stu.xuhao = 201814120211")
+def selectall():
+    tsdb = tsdb_sample.select(
+        "select  Identity ,Temperature, Number_02,  String_01 from metric order by "
+        "Number_02 desc")
+    return tsdb
+if __name__ == "__main__":
+    res = selectall()
+    print (res)

@@ -1,5 +1,5 @@
 # coding=utf-8
-from flask import Flask, jsonify
+from flask import Flask
 import tsdb_sample
 import time
 import mysqldb
@@ -146,5 +146,6 @@ def selectmonth():
     return returndate
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True, port=80)
+
